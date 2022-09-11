@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: black;
+}
+
+.www {
+    color: aqua;
+}
+
+.weather {
+    position: relative;
+    // border: 1px solid black;
+    width: 230px;
+    padding: 20px;
+    overflow: hidden;
+    min-height: 110px;
+}
+
+.settings {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    z-index: 1;
+    height: 30px;
+}
+
+.icon {
+    svg {
+        width: 35px;
+        height: 35px;
+    }
+
+    width: 35px;
+    height: 35px;
+}
+
+.temperature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: -20px;
+
+    &__text {
+        font-size: 31px;
+    }
+}
+
+.speed_hpa {
+    display: grid;
+    grid-template-columns: 115px 120px;
+    gap: 10px 0;
+}
+
+.icon-description {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.humidity_visibility {
+    display: flex;
+}
+
+.icon-settings {
+    svg {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.icon-close {
+    transform: translateX(55px) translateY(-32px);
+
+    svg {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.feels {
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.weather__info {
+    padding-bottom: 25px
+}
+
+.weather__info,
+.icon-close,
+.icon-open,
+.no-cities {
+    transition: transform 0.3s ease;
+}
+
+.weather-settings {
+    transition: transform 0.3s ease;
+    position: absolute;
+    top: 27px;
+    left: 20px;
+}
+
+.weather-settings {
+    transform: translateX(-260px);
+
+    &__cities {
+        width: 225px;
+        margin-top: 15px;
+    }
+}
+
+.no-cities {
+    padding-top: 5px;
+}
+
+
+// .icon-close {
+//     transform: translateX(55px);
+//     // position: absolute;
+//     // right: -60px;
+//     // top: 0;
+
+// }
+
+.settings-toggle {
+
+    .weather__info,
+    .no-cities {
+        position: relative;
+        transform: translateX(-260px);
+    }
+
+    .weather-settings {
+        transform: translateX(0);
+    }
+
+    .icon-close {
+        // transform: translateX(0);
+        transform: translateX(0) translateY(-32px);
+    }
+
+    .icon-open {
+        transform: translateY(-60px);
+    }
+}
+
+.error {
+    color: red;
+}
+
+.city-settings {
+    display: flex;
+    justify-content: space-between;
+    background: silver;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+
+    &__info {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__delete {
+        cursor: pointer;
+
+        svg {
+            width: 14px;
+            height: 14px;
+        }
+    }
+}
+
+// ...........................
+
+.droppable {
+    padding: 15px;
+    border-radius: 5px;
+    background: blue;
+    margin-bottom: 10px;
+
+    h4 {
+        color: white
+    }
+}
+
+.draggable {
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+
+    h5 {
+        margin: 0;
+    }
+}
+
+// ......................
+
+.draggable-list {
+    background: #3f51b5;
+    color: #fff;
+    border: 1px solid;
+    height: 50vh;
+}
+
+.list-item {
+    margin: 10px;
+    padding: 40px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    background: #f44336;
+    display: inline-block;
+}
+
+form {
+    margin-bottom: 10px;
+
+    input {
+        margin-right: 15px;
+    }
+}
+
+.icon-enter {
+    height: 23px;
+
+    svg {
+        height: 22px;
+    }
+}
+
+// input {
+//     padding-left: 10px;
+// }
+
+.form-add {
+    display: flex;
+}
