@@ -67,10 +67,9 @@
 
 import Icon from "./Icon.vue";
 import Cities from "./Cities";
-import CitiesForm from "@/components/CitiesForm.vue";
 
 export default {
-  components: { Icon, Cities, CitiesForm },
+  components: { Icon, Cities },
 
   data() {
     return {
